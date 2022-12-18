@@ -1,4 +1,6 @@
-function addSum(a,b) {
-return a + b;
+function capatalize(strg) {
+  let loweString = strg.toLowerCase();
+  let higerString = loweString.charAT(0).to;
+  return loweString;
 }
-console.log(addSum(10,5))
+console.log(capatalize("HELLO MY NAME IS Paul"));
