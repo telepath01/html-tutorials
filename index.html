@@ -8,59 +8,59 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="http://httpbin.org/post" method="post">
-      <fieldset>
-        <legend>User Name and Password</legend>
-        <label for="user_id"> User ID:</label>
-        <input type="text" id="user_id" name="user" />
-        <p>
-          <label for="pw">Password:</label>
-          <input type="password" id="pw" name="user_pasword" />
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>Who is your favorit pony?</legend>
-        <ul>
-          <li>
-            <input type="radio" id="pinki_pie" name="pinki-pie" />
-            <label for="pinki_pie">Pinkie Pie</label>
-          </li>
-          <li>
-            <input type="radio" id="ranbow_dash" name="rainbow-dash" />
-            <label for="rainbow_dash">Rainbow Dash</label>
-          </li>
-          <li>
-            <input type="radio" id="twilight_sparkle" name="twilight-sparkle" />
-            <label for="twilight_sparkle">Twilight Sparkle</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Hotdog Preferences</legend>
-        <ul>
-          <li>
-            <input type="checkbox" id="vegan" name="vegan" />
-            <label for="vegan">Vegan</label>
-          </li>
-          <li>
-            <input type="checkbox" id="onions" name="onions" />
-            <label for="onions">Onions</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Document Upload</legend>
-        <label for="file_upload">Choose your files:</label>
-        <input
-          type="file"
-          id="file_upload"
-          name="siles"
-          multiple
-          accept=".jpg,.png"
-        />
-      </fieldset>
-      <button type="submit">Submit</button>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input
+            type="text"
+            name="uname"
+            id="uname"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="johndoe@gmail.com"
+          />
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            required
+            maxlength="15"
+            minlength="10"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+          />
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea
+            name="comment"
+            id="comment"
+            required
+            maxlength="200"
+            placeholder="Place your comment here..."
+          >
+          </textarea>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
     </form>
-    <!-- <script tupe="text/javascript" src="/scripts/scripts.js"></script> -->
+    <script tupe="text/javascript" src="/scripts/scripts.js"></script>
   </body>
 </html>
