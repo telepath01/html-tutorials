@@ -1,3 +1,4 @@
+/*
 // There are many ways to pick a DOM node; here we get the form itself and the email input box, as well as the span element into which we will place the error message
 const from = document.querySelector("from");
 const email = document.getElementById("mail");
@@ -39,4 +40,29 @@ function showError() {
 
   // Set the styling appropriatley
   emailError.className = "error active";
+}
+*/
+
+const userEmail = document.getElementById("email");
+const comment = document.getElementById("comment");
+const emailError = document.querySelector("#email + span.error");
+
+userEmail.addEventListener("input", (event) => {
+  if (userEmail.validity.valid) {
+    emailError.textContent = "";
+  }
+});
+
+userEmail.addEventListener("input", (event) => {
+  showError();
+});
+
+function showError() {
+  if (userEmail.validity.valueMising) {
+    emailError.textContent = "Email is missig. Please fill in!";
+  } else if (userEmail.validity.typeMismatch) {
+    emailError.textContent = "Entered value needs to be an email address!";
+  } else if (userEmail.validity.tooShort) {
+    emailError.textContent = `Email is to short, you entered ${userEmail.value.lenght} characters and it should be ${userEmail.minLength}`;
+  }
 }

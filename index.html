@@ -12,14 +12,16 @@
       <h2>Enter your support query</h2>
       <ul>
         <li>
-          <label for="uname">User name:</label>
+          <label for="name">User name:</label>
           <input
             type="text"
-            name="uname"
-            id="uname"
+            name="name"
+            id="name"
             required
             minlength="5"
             maxlength="20"
+            pattern="[a-z]{1}.[a-z0-9]{3}"
+            placeholder="j.doe1"
           />
         </li>
         <li>
@@ -29,8 +31,10 @@
             name="email"
             id="email"
             required
-            placeholder="johndoe@gmail.com"
+            placeholder="jd@bigcorp.eu"
+            pattern="[Aa-Z][0-9]"
           />
+          <span class="error" aria-live="polite"></span>
         </li>
         <li>
           <label for="phone">Phone number:</label>
@@ -53,6 +57,7 @@
             required
             maxlength="200"
             placeholder="Place your comment here..."
+            minlength="10"
           >
           </textarea>
         </li>
