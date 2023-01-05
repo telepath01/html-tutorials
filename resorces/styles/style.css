@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+  height: 50vh;
+  width: 50vw;
+}
+
+.heading-container {
+  display: grid;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  margin-left: 50%;
+  margin-top: 25%;
+  background-color: rgb(180, 180, 255);
+  height: 50%;
+  width: 90%;
+}
+.heading {
+  text-align: center;
+  font-size: 5rem;
+}
